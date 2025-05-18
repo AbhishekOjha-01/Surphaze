@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surphaze</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+  <link rel="shortcut icon" href="assets/s-modified.png" type="image/x-icon">
+</head>
+<body>
+  <div class="main">
+    
+    <!-- header section -->
+
+     <header>
+      <a href="#home" class="logo">
+        <!-- <span>Surphaze</span> -->
+         <img src="assets/IMG-20250427-WA0000-removebg-preview.png" alt="">
+      </a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="btn">
+          <button onclick="openForm('loginPopup')">Log In</button>
+          <div id="overlay" class="overlay"></div>
+          <div id="loginPopup" class="form-popup">
+            <form id="login-form" action="#" method="POST" autocomplete="on" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+              <h3 id="loginTitle">Sign In now</h3>
+              <p>Don't have an account? <a href="#" onclick="switchToRegister()">Sign Up</a></p>
+            
+              <label for="login-username">Username</label>
+              <input type="text" id="login-username" name="username" placeholder="Username here" required autocomplete="username">
+            
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" placeholder="Password here" required autocomplete="current-password">
+            
+              <div class="button">
+                <button type="submit" class="btn-login">Sign In</button>
+                <button type="button" class="btn-cancel" onclick="closeForm('loginPopup')">Close</button>
+              </div>
+            
+              <h4>or Sign In with</h4>
+              <div class="signIn-options">
+                <div class="option" style="background-color: #fdedeb;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="Sign in with Google"/>
+                </div>
+                <div class="option" style="background-color: #e8f2fe;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/facebook-new.png" alt="Sign in with Facebook"/>
+                </div>
+                <div class="option" style="background-color: #e6f2f8;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/linkedin.png" alt="Sign in with LinkedIn"/>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          <button onclick="openForm('registerPopup')">Register</button>
+          <div id="registerPopup" class="form-popup">
+            <form id="register-form" action="#" method="POST" autocomplete="on" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+              <h3 id="registerTitle">Sign Up Now</h3>
+              <p>Already have an account? <a href="#" onclick="switchToLogin()">Sign In</a></p>
+            
+              <label for="register-name">Full Name</label>
+              <input type="text" id="register-name" name="fullname" placeholder="Full Name here" required>
+            
+              <label for="register-username">Username</label>
+              <input type="text" id="register-username" name="username" placeholder="Username here" required>
+            
+              <label for="register-email">Email</label>
+              <input type="email" id="register-email" name="email" placeholder="Enter Email here" required autocomplete="email">
+            
+              <label for="register-password">Password</label>
+              <input type="password" id="register-password" name="password" placeholder="Password here" required autocomplete="new-password">
+            
+              <div class="button">
+                <button type="submit" class="btn-login">Sign Up</button>
+                <button type="button" class="btn-cancel" onclick="closeForm('registerPopup')">Close</button>
+              </div>
+            
+              <h4>or Sign Up with</h4>
+              <div class="signIn-options">
+                <div class="option" style="background-color: #fdedeb;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="Sign up with Google"/>
+                </div>
+                <div class="option" style="background-color: #e8f2fe;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/facebook-new.png" alt="Sign up with Facebook"/>
+                </div>
+                <div class="option" style="background-color: #e6f2f8;">
+                  <img width="30" height="30" src="https://img.icons8.com/color/48/linkedin.png" alt="Sign up with LinkedIn"/>
+                </div>
+              </div>
+            </form>
+                        
+          </div>
+        </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+     </header>
+
+     <!-- hero section -->
+
+     <div class="hero" id="home">
+      <div class="text-content">
+        <h1 class="animated-text">No Glitch. Just Glory.</h1>
+        <p><Strong>Surphaze</Strong> is a dynamic digital agency specializing in blog writing, website development, SEO, and branding.It helps businesses enhance their online presence and achieve digital success.With a modern approach, Surphaze delivers custom strategies that drive growth.Focused on creativity and technology, it offers solutions tailored to your brand’s needs.</p>
+        <div class="get-start">
+          <button onclick="openForm('loginPopup')">Get Started<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/013/743/949/small/hand-drawn-light-bulbs-creative-idea-png.png" alt="img">
+      </div>
+     </div>
+
+     <!-- services section -->
+
+     <div class="services" id="service">
+      <h1>Our Services</h1>
+      <div class="service-cards">
+        <div class="card">
+          <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+          <h3>Blog Writing</h3>
+          <p>Got stories or ideas to share? We transform your voice into captivating blog content! Whether fun or insightful, we write it your way to make your brand shine.</p>
+          <button>Know More <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="modal">
+          <div class="modal-card">
+            <i class="ri-close-large-line modal-close"></i>
+            <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+
+            <div>
+              <h3 class="modal-name">Blog Writing</h3>
+              <p class="modal-info">
+                "Engage your audience with expertly written blogs that captivate and inform. We craft content that aligns with your brand and sparks conversation. Drive traffic and build your online presence with every post!"
+              </p>
+              <span class="modal-price">Starting just @ $99</span>
+            </div>
+            <div class="button">
+              <button data-form="form-blog" onclick="location.href='booking.html?form=form-blog'">Book Now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+          <h3>Website Development</h3>
+          <p>Ready for your dream website? With over 5 years of AI expertise, our team designs sites that impress and grow your brand. Book now to start your online success!</p>
+          <button>Know More <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="modal">
+          <div class="modal-card">
+            <i class="ri-close-large-line modal-close"></i>
+            <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+
+            <div>
+              <h3 class="modal-name">Website Development</h3>
+              <p class="modal-info">
+                "Build a stunning, user-friendly website that reflects your brand’s identity. We create responsive, high-performing sites that engage visitors and drive conversions. Let’s turn your vision into a seamless online experience!"
+              </p>
+              <span class="modal-price">Starting just @ $99</span>
+            </div>
+            <div class="button">
+              <button data-form="form-webdev" onclick="location.href='booking.html?form=form-webdev'">Book Now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+          <h3>E-Commerce Website</h3>
+          <p>Dream big with your brand — Build a standout e-commerce site that drives growth and outshines the competition. Go global, grow faster, and make your mark!</p>
+          <button>Know More <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="modal">
+          <div class="modal-card">
+            <i class="ri-close-large-line modal-close"></i>
+            <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+
+            <div>
+              <h3 class="modal-name">E-Commerce Website</h3>
+              <p class="modal-info">
+                "Launch a powerful, seamless online store that drives sales and enhances customer experience. We build user-friendly e-commerce platforms that are secure, scalable, and ready for growth. Let’s turn your products into a successful online business!"
+              </p>
+              <span class="modal-price">Starting just @ $99</span>
+            </div>
+            <div class="button">
+              <button data-form="form-ecom" onclick="location.href='booking.html?form=form-ecom'">Book Now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+          <h3>Search Engine Optimization</h3>
+          <p>Want to rank higher? We craft SEO content with smart keywords to boost your search game.Book your SEO pro now and boost your search game!</p>
+          <button>Know More <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="modal">
+          <div class="modal-card">
+            <i class="ri-close-large-line modal-close"></i>
+            <img src="https://readnest.co.in/wp-content/uploads/2024/11/man-signing-contract-with-big-pen_74855-10909.jpg" alt="">
+
+            <div>
+              <h3 class="modal-name">Search Engine Optimization</h3>
+              <p class="modal-info">
+                "Increase your visibility and rank higher on search engines. Our SEO strategies drive organic traffic and enhance your online presence. Let us optimize your website and attract the right audience!"
+              </p>
+              <span class="modal-price">Starting just @ $99</span>
+            </div>
+            <div class="button">
+              <button data-form="form-seo" onclick="location.href='booking.html?form=form-seo'">Book Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <!-- about section -->
+
+      <div class="about-section" id="about">
+        <div class="about-us">
+          <h1>About Us</h1>
+          <h2>Your one-stop destination for powerful content and seamless digital solutions.</h2>
+          <p>Our mission is to deliver high-quality, customized services tailored to meet your needs. Whether you are a student, a business owner, or a digital creator, we are here to support your growth with precision and creativity.<p>
+          <p>If you have any query in your mind, contact our expert for assistance.</p>
+          <button>Contact Us</button>
+          <div class="numbers">
+            <div class="num-card">
+              <!-- <h2>111+</h2> -->
+              <h2 class="counter" data-target="111">0</h2>
+              <p>Happy Customers</p>
+            </div>
+            <div class="num-card">
+              <!-- <h2>111+</h2> -->
+              <h2 class="counter" data-target="111">0</h2>
+              <p>Articles Published</p>
+            </div>
+            <div class="num-card">
+              <!-- <h2>111+</h2> -->
+              <h2 class="counter" data-target="111">0</h2>
+              <p>Blogs Written</p>
+            </div>
+            <div class="num-card">
+              <!-- <h2>111+</h2> -->
+              <h2 class="counter" data-target="111">0</h2>
+              <p>Verified Articles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contact section -->
+
+      <div class="contact-section" id="contact">
+        <h1>Contact Us</h1>
+          <div class="contact-us">
+            <h3>Have questions? Get in touch with us</h3>
+            <div>
+              <div class="email-content">
+                <h3>Drop an E-mail</h3>
+                <form>
+                  <label for="fname">Full Name</label>
+                  <input type="text" id="fname" placeholder="Full Name here">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Your Email here">
+                  <label for="query">Tell Us</label>
+                  <input type="text" id="query" placeholder="How can we help You? Feel free to get in touch!">
+                  <button>Send Message <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+              </div>
+              <div class="also-at">
+                <h3>We are also available at...</h3>
+                <div class="options">
+                  <div class="options-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <h5>Phone Call</h5>
+                  </div>
+                  <div class="options-card">
+                    <i class="fa-solid fa-message"></i>
+                    <h5>Message</h5>
+                  </div>
+                  <div class="options-card">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                    <h5>WhatsApp</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- footer section -->
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="footer-about">
+              <h3>Surphaze</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel repellendus.</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-company">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <p>Email: info@surphaze.com</p>
+              <p>Phone: +91 1234567890</p>
+              <p>Location: New York, NY, USA</p>
+            </div>
+            <div class="footer-social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Surphaze. All rights reserved.</p>
+        </div>
+      </footer>
+
+  </div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
