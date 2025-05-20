@@ -1,7 +1,9 @@
 // controllers/authController.js
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
+//User Register
 exports.registerUser = async (req, res) => {
   try {
     const { fullname, username, email, password } = req.body;
@@ -31,5 +33,25 @@ exports.registerUser = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: 'Server error' });
+  }
+};
+
+//User Login
+exports.login = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).json({ msg: 'Invalid credentials' });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '2h' });
+
+    res.status(200).json({ msg: 'Login successful', token, user: { fullname: user.fullname, email: user.email } });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ msg: 'Server error during login' });
   }
 };
