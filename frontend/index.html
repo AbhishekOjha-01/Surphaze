@@ -26,7 +26,7 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <div class="btn">
-          <button onclick="openForm('loginPopup')">Log In</button>
+          <button id="loginBtn" onclick="openForm('loginPopup')">Log In</button>
           <div id="overlay" class="overlay"></div>
           <div id="loginPopup" class="form-popup">
             <form id="login-form" action="#" method="POST" autocomplete="on" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
@@ -61,7 +61,8 @@
           </div>
 
           <!-- Sign Up Form -->
-          <button onclick="openForm('registerPopup')">Register</button>
+          <button id="registerBtn" onclick="openForm('registerPopup')">Register</button>
+          <button id="logoutBtn" style="display: none;" onclick="logout()">Logout</button>
           <div id="registerPopup" class="form-popup">
             <form id="register-form" action="#" method="POST" autocomplete="on" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
               <h3 id="registerTitle">Sign Up Now</h3>
@@ -346,7 +347,6 @@
   </div>
 
 <script src="script.js"></script>
-
-
+<script src="js/authToggle.js"></script>
 </body>
 </html>

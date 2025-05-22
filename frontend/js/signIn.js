@@ -21,12 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const result = await response.json();
 
-        if (response.ok) {
+        if (response.ok && result.token) {
+          localStorage.setItem("authToken", result.token);
           alert(result.msg || 'Login successful!');
           closeForm('loginPopup');
           loginForm.reset();
-          // Optionally store token
-          localStorage.setItem('token', result.token);
+          
+          // Update button visibility manually after login
+          document.getElementById('loginBtn').style.display = "none";
+          document.getElementById('registerBtn').style.display = "none";
+          document.getElementById('logoutBtn').style.display = "inline-block";
+
         } else {
           alert(result.msg || 'Login failed!');
         }
