@@ -73,21 +73,21 @@
       <div id="form-webdev" class="form hidden"> 
         <h2>Website Development Form</h2>
         <!-- Add your web development form fields here -->
-         <form>
+         <form id="webDevForm">
           <label for="fname">First Name</label>
-          <input type="text" placeholder="First name" required>
+          <input type="text" id="fname" name="fname" placeholder="First name" required>
 
           <label for="lname">Last Name</label>
-          <input type="text" placeholder="Last name" required>
+          <input type="text" id="lname" name="lname" placeholder="Last name" required>
 
           <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email here">
+          <input type="text" id="email" name="email" placeholder="Enter Email here">
 
           <label for="busi-name">Business or Organization Name</label>
-          <input type="text" placeholder="What is the name of your business or organization?">
+          <input type="text" id="businessName" name="businessName" placeholder="What is the name of your business or organization?">
 
           <label for="category">Select Website Type</label>
-          <select name="category" id="category">
+          <select name="websiteType" id="websiteType">
             <option value="">--Please choose an option--</option>
             <option value="personal">Personal</option>
             <option value="business">Business</option>
@@ -98,7 +98,7 @@
           </select>
 
           <label>Do you already have a website?</label>
-          <select name="category" id="category">
+          <select name="hasWebsite" id="hasWebsite">
             <option value="">--Please choose an option--</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -123,8 +123,8 @@
           <textarea id="comments" name="comments" rows="3" placeholder="Anything else we should know?"></textarea>
 
           <button>Book</button>
-
          </form>
+         <script src="js/webDevBook.js"></script>
       </div>
     
       <div id="form-ecom" class="form hidden"> 
