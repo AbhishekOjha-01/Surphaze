@@ -531,6 +531,11 @@ form button i {
   padding: 15px;
 }
 
+.options a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .options-card{
   margin: 10px;
   background-color: #307bc4;
