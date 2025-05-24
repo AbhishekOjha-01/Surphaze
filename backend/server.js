@@ -8,6 +8,7 @@ dotenv.config();
 
 const authRoutes = require('./routes/authRoutes');
 const blogBookingRoutes = require('./routes/blogBookingRoutes');
+const webDevBookingRoutes = require('./routes/webDevBookingRoutes');
 
 const app = express();
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use(cors());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/blogBookings', blogBookingRoutes);
+app.use('/api/webDevBookings', webDevBookingRoutes);
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {
