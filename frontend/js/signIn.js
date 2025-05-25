@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (response.ok && result.token) {
           localStorage.setItem("authToken", result.token);
-          alert(result.msg || 'Login successful!');
+          window.location.href = 'success/login-success.html';
           closeForm('loginPopup');
           loginForm.reset();
           
