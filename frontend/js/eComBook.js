@@ -10,7 +10,7 @@ document.getElementById('eComForm').addEventListener('submit', async function (e
   productsCount: parseInt(document.getElementById('products-count').value),
   paymentGateway: document.getElementById('paymentGateway').value,
   shipping: document.getElementById('shipping').value,
-  design: document.getElementById('design-ecom').value,
+  designPreferences: document.getElementById('design-ecom').value,
   budget: document.getElementById('budget-ecom').value,
   deadline: document.getElementById('deadline-ecom').value,
   comments: document.getElementById('comments-ecom').value,
