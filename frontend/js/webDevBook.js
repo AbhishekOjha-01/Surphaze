@@ -8,10 +8,10 @@ document.getElementById('webDevForm').addEventListener('submit', async function 
   businessName: document.getElementById('businessName').value,
   websiteType: document.getElementById('websiteType').value,
   hasWebsite: document.getElementById('hasWebsite').value,
-  goals: document.getElementById('goals').value,
+  projectGoals: document.getElementById('goals').value,
   designPreferences: document.getElementById('design').value,
-  pages: parseInt(document.getElementById('pages').value),
-  budget: document.getElementById('budget').value,
+  numPages: parseInt(document.getElementById('pages').value),
+  budget: parseInt(document.getElementById('budget').value),
   deadline: document.getElementById('deadline').value,
   comments: document.getElementById('comments').value,
 };
