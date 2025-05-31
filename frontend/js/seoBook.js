@@ -2,9 +2,9 @@ document.getElementById('seoForm').addEventListener('submit', async function (e)
   e.preventDefault();
 
   const data = {
-    fname: document.querySelector('input[placeholder="First name"]').value,
-    lname: document.querySelector('input[placeholder="Last name"]').value,
-    email: document.querySelector('input[placeholder="Enter Email here"]').value,
+    fname: document.getElementById('fname-seo').value,
+    lname: document.getElementById('lname-seo').value,
+    email: document.getElementById('email-seo').value,
     business: document.getElementById('business-seo').value,
     websiteUrl: document.getElementById('website-url').value,
     seoGoals: document.getElementById('seo-goals').value,

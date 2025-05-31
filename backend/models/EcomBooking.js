@@ -11,7 +11,7 @@ const EcommerceBookingSchema = new mongoose.Schema({
   shipping: { type: String, required: true },
   designPreferences: { type: String },
   budget: { type: String },
-  deadline: { type: String },
+  deadline: { type: Date },
   comments: { type: String }
 }, { timestamps: true });
 

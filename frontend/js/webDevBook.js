@@ -11,9 +11,9 @@ document.getElementById('webDevForm').addEventListener('submit', async function 
   projectGoals: document.getElementById('goals').value,
   designPreferences: document.getElementById('design').value,
   numPages: parseInt(document.getElementById('pages').value),
-  budget: parseInt(document.getElementById('budget').value),
-  deadline: document.getElementById('deadline').value,
-  comments: document.getElementById('comments').value,
+  budget: document.getElementById('budget-web').value,
+  deadline: document.getElementById('deadline-web').value,
+  comments: document.getElementById('comments-web').value,
 };
 
   try {

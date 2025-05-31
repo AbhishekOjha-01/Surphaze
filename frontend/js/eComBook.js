@@ -2,9 +2,9 @@ document.getElementById('eComForm').addEventListener('submit', async function (e
   e.preventDefault();
 
   const data = {
-  fname: document.getElementById('fname').value,
-  lname: document.getElementById('lname').value,
-  email: document.getElementById('email').value,
+  fname: document.getElementById('fname-ecom').value,
+  lname: document.getElementById('lname-ecom').value,
+  email: document.getElementById('email-ecom').value,
   businessName: document.getElementById('business-ecom').value,
   industry: document.getElementById('industry-ecom').value,
   productsCount: parseInt(document.getElementById('products-count').value),
@@ -27,6 +27,7 @@ document.getElementById('eComForm').addEventListener('submit', async function (e
     if (response.ok) {
       alert(result.message);
       document.getElementById('eComForm').reset();
+      window.location.href = 'index.html';
     } else {
       alert(result.message || 'Booking failed!');
     }
