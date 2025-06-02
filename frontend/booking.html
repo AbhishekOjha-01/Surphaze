@@ -114,13 +114,13 @@
           <input type="number" id="pages" name="pages" placeholder="e.g., 5">
 
           <label for="budget">Budget Range</label>
-          <input type="text" id="budget" name="budget" placeholder="e.g., $500–$1000">
+          <input type="text" id="budget-web" name="budget-web" placeholder="e.g., $500–$1000">
 
           <label for="deadline">Project Deadline</label>
-          <input type="date" id="deadline" name="deadline">
+          <input type="date" id="deadline-web" name="deadline-web">
 
           <label for="comments">Additional Comments</label>
-          <textarea id="comments" name="comments" rows="3" placeholder="Anything else we should know?"></textarea>
+          <textarea id="comments-web" name="comments-web" rows="3" placeholder="Anything else we should know?"></textarea>
 
           <button>Book</button>
          </form>
@@ -132,13 +132,13 @@
         <!-- Add your e-commerce form fields here -->
         <form id="eComForm">
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname" placeholder="First name" required>
+          <input type="text" id="fname-ecom" name="fname-ecom" placeholder="First name" required>
 
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lname" placeholder="Last name" required>
+          <input type="text" id="lname-ecom" name="lname-ecom" placeholder="Last name" required>
 
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Enter Email here">
+          <input type="text" id="email-ecom" name="email-ecom" placeholder="Enter Email here">
 
           <label for="business-ecom">Business Name or Store Name</label>
           <input type="text" id="business-ecom" name="business-ecom" placeholder="e.g., Fashion World" required>
@@ -193,59 +193,59 @@
         <h2>Search Engine Optimizaiton Form</h2>
         <!-- Add your SEO form fields here -->
 
-        <form>
-          <label for="fname">First Name</label>
-          <input type="text" placeholder="First name" required>
+        <form id="seoForm">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname-seo" name="fname-seo" placeholder="First name" required>
 
-          <label for="lname">Last Name</label>
-          <input type="text" placeholder="Last name" required>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname-seo" name="lname-seo" placeholder="Last name" required>
 
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email here">
-        
-          <label for="business-seo">Business or Website Name</label>
-          <input type="text" id="business-seo" name="business" placeholder="Your business or website name" required>
-        
-          <label for="website-url">Website URL</label>
-          <input type="url" id="website-url" name="website-url" placeholder="https://yourwebsite.com" required>
-        
-          <label for="seo-goals">What are your SEO goals?</label>
-          <textarea id="seo-goals" name="seo-goals" rows="3" placeholder="Describe your SEO goals (e.g., increase organic traffic, improve search rankings)"></textarea>
-        
-          <label for="target-audience">Who is your target audience?</label>
-          <textarea id="target-audience" name="target-audience" rows="3" placeholder="Describe your target audience (e.g., age, location, interests)"></textarea>
-        
-          <label for="keywords">Target Keywords</label>
-          <input type="text" id="keywords" name="keywords" placeholder="e.g., digital marketing, best SEO agency" required>
-        
-          <label for="competitors">Who are your main competitors?</label>
-          <input type="text" id="competitors" name="competitors" placeholder="e.g., competitor1.com, competitor2.com" required>
-        
-          <label for="current-seo-status">What is your current SEO status?</label>
-          <select id="current-seo-status" name="current-seo-status" required>
-            <option value="">-- Select your current SEO status --</option>
-            <option value="none">No SEO implemented</option>
-            <option value="basic">Basic SEO implemented</option>
-            <option value="advanced">Advanced SEO implemented</option>
-          </select>
-        
-          <label for="budget-seo">Budget Range</label>
-          <input type="text" id="budget-seo" name="budget" placeholder="e.g., $500–$2000">
-        
-          <label for="deadline-seo">Project Deadline</label>
-          <input type="date" id="deadline-seo" name="deadline">
-        
-          <label for="comments-seo">Additional Comments</label>
-          <textarea id="comments-seo" name="comments" rows="3" placeholder="Anything else you'd like to add?"></textarea>
-        
-          <button type="submit">Submit</button>
+    <label for="email">Email</label>
+    <input type="text" id="email-seo" name="email-seo" placeholder="Enter Email here">
 
-      </div>
-    </div>
+    <label for="business-seo">Business or Website Name</label>
+    <input type="text" id="business-seo" name="business-seo" placeholder="Your business or website name" required>
+
+    <label for="website-url">Website URL</label>
+    <input type="url" id="website-url" name="website-url" placeholder="https://yourwebsite.com" required>
+
+    <label for="seo-goals">What are your SEO goals?</label>
+    <textarea id="seo-goals" name="seo-goals" rows="3" placeholder="Describe your SEO goals"></textarea>
     
+    <label for="target-audience">Who is your target audience?</label>
+    <textarea id="target-audience" name="target-audience" rows="3" placeholder="Describe your target audience"></textarea>
+    
+    <label for="keywords">Target Keywords</label>
+    <input type="text" id="keywords" name="keywords" placeholder="e.g., digital marketing, best SEO agency" required>
+    
+    <label for="competitors">Who are your main competitors?</label>
+    <input type="text" id="competitors" name="competitors" placeholder="e.g., competitor1.com" required>
+    
+    <label for="current-seo-status">What is your current SEO status?</label>
+    <select id="current-seo-status" name="current-seo-status" required>
+      <option value="">-- Select your current SEO status --</option>
+      <option value="none">No SEO implemented</option>
+      <option value="basic">Basic SEO implemented</option>
+      <option value="advanced">Advanced SEO implemented</option>
+    </select>
+    
+    <label for="budget-seo">Budget Range</label>
+    <input type="text" id="budget-seo" name="budget-seo" placeholder="e.g., $500–$2000">
+    
+    <label for="deadline-seo">Project Deadline</label>
+    <input type="date" id="deadline-seo" name="deadline-seo">
+    
+    <label for="comments-seo">Additional Comments</label>
+    <textarea id="comments-seo" name="comments-seo" rows="3" placeholder="Anything else you'd like to add?"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <script src="js/seoBook.js"></script>
+</div>
+</div>
 
 
-  </div>
+</div>
 
 
 <style>
