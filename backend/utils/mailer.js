@@ -15,8 +15,10 @@ const sendBlogBookingMail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
-    to: process.env.ADMIN_EMAIL, 
+    from: email ,
+    to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New Blog Booking Details from ${fname} ${lname}`,
     html: `
       <h2>New Blog Booking Details</h2>
@@ -43,8 +45,10 @@ const sendWebDevBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New Web Development Booking from ${fname} ${lname}`,
     html: `
       <h2>New Web Development Booking Details</h2>
@@ -73,8 +77,10 @@ const sendEcommerceBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New E-commerce Booking from ${fname} ${lname}`,
     html: `
       <h2>New E-commerce Booking Details</h2>
@@ -103,8 +109,10 @@ const sendSeoBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New SEO Booking from ${fname} ${lname}`,
     html: `
       <h2>New SEO Booking Details</h2>
@@ -126,4 +134,26 @@ const sendSeoBookingEmail = async (bookingData) => {
   await transporter.sendMail(mailOptions);
 };
 
-module.exports = { sendBlogBookingMail, sendWebDevBookingEmail, sendEcommerceBookingEmail, sendSeoBookingEmail };
+
+// Function to send contact form email to admin
+const sendEmailQueryToAdmin = async (queryData) => {
+  const { fname, email, query } = queryData;
+
+  const mailOptions = {
+    from: email,
+    to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
+    subject: `New Contact Query from ${fname}`,
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${fname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Query:</strong> ${query}</p>
+    `
+  };
+
+  await transporter.sendMail(mailOptions);
+};
+
+module.exports = { sendBlogBookingMail, sendWebDevBookingEmail, sendEcommerceBookingEmail, sendSeoBookingEmail, sendEmailQueryToAdmin  };
