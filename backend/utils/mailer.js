@@ -15,8 +15,10 @@ const sendBlogBookingMail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
-    to: process.env.ADMIN_EMAIL, 
+    from: email ,
+    to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New Blog Booking Details from ${fname} ${lname}`,
     html: `
       <h2>New Blog Booking Details</h2>
@@ -43,8 +45,10 @@ const sendWebDevBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New Web Development Booking from ${fname} ${lname}`,
     html: `
       <h2>New Web Development Booking Details</h2>
@@ -73,8 +77,10 @@ const sendEcommerceBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New E-commerce Booking from ${fname} ${lname}`,
     html: `
       <h2>New E-commerce Booking Details</h2>
@@ -103,8 +109,10 @@ const sendSeoBookingEmail = async (bookingData) => {
   } = bookingData;
 
   const mailOptions = {
-    from: process.env.ADMIN_EMAIL,
+    from: email,
     to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
     subject: `New SEO Booking from ${fname} ${lname}`,
     html: `
       <h2>New SEO Booking Details</h2>
