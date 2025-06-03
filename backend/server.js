@@ -11,6 +11,7 @@ const blogBookingRoutes = require('./routes/blogBookingRoutes');
 const webDevBookingRoutes = require('./routes/webDevBookingRoutes');
 const eComBookingRoutes = require('./routes/eComBookingRoutes');
 const seoBookingRoutes = require('./routes/seoBookingRoutes');
+const emailQueryRoutes = require('./routes/emailRoutes');
 
 const app = express();
 app.use(express.json());
@@ -22,6 +23,7 @@ app.use('/api/blogBookings', blogBookingRoutes);
 app.use('/api/webDevBookings', webDevBookingRoutes);
 app.use('/api/eComBookings', eComBookingRoutes);
 app.use('/api/seoBookings', seoBookingRoutes);
+app.use('/api/emailQueries', emailQueryRoutes);
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {

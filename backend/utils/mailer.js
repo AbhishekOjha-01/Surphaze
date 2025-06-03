@@ -134,4 +134,26 @@ const sendSeoBookingEmail = async (bookingData) => {
   await transporter.sendMail(mailOptions);
 };
 
-module.exports = { sendBlogBookingMail, sendWebDevBookingEmail, sendEcommerceBookingEmail, sendSeoBookingEmail };
+
+// Function to send contact form email to admin
+const sendEmailQueryToAdmin = async (queryData) => {
+  const { fname, email, query } = queryData;
+
+  const mailOptions = {
+    from: email,
+    to: process.env.ADMIN_EMAIL,
+    bcc: email,
+    replyTo: email,
+    subject: `New Contact Query from ${fname}`,
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${fname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Query:</strong> ${query}</p>
+    `
+  };
+
+  await transporter.sendMail(mailOptions);
+};
+
+module.exports = { sendBlogBookingMail, sendWebDevBookingEmail, sendEcommerceBookingEmail, sendSeoBookingEmail, sendEmailQueryToAdmin  };
